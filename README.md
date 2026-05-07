@@ -13,13 +13,13 @@ Images are published to GitHub Container Registry for CUDA versions: 12.8.1, 12.
 
 ```bash
 # Host to device memory copy (CE)
-docker run --rm --gpus all ghcr.io/slapshin/nvbw:cuda-12.9.0 -t host_to_device_memcpy_ce
+docker run --rm --gpus all ghcr.io/slapshin/nvbw:cuda-13.2.1 host_to_device_memcpy_ce
 
 # Device to host memory copy (CE)
-docker run --rm --gpus all ghcr.io/slapshin/nvbw:cuda-12.9.0 -t device_to_host_memcpy_ce
+docker run --rm --gpus all ghcr.io/slapshin/nvbw:cuda-13.2.1 device_to_host_memcpy_ce
 
-# List all available tests
-docker run --rm --gpus all ghcr.io/slapshin/nvbw:cuda-12.9.0 --list
+# Bidirectional
+docker run --rm --gpus all ghcr.io/slapshin/nvbw:cuda-13.2.1 host_to_device_bidirectional_memcpy_ce
 ```
 
 ## Build locally
